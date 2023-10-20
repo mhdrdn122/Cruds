@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Cairo:wght@200;300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <title>cruds</title>
+</head>
+<body>
+    <div class="container">
+        <div class="alert" id="alert">
+            <p class="erorr" id="erorr">afnod</p>
+            <button onclick="cancelAlert()">cancel</button>
+        </div>
+        <div class="cruds">
+            <!-- Start head projects-->
+            <div class="head-cruds">
+                <h1>Cruds</h1>
+                <p>create read update delete sertch</p>
+            </div>
+            <!-- End head projects-->
+
+            <!-- start Inputs projects-->
+            <div class="Inputs-cruds">
+                <input    placeholder='Title' id="title" type='text'/>
+                <div class='prices-input'>
+            
+                    <input onkeyup="getTotal()"  placeholder='price' id="price" type='number'/>
+                    <input onkeyup="getTotal()"  placeholder='Taxes' id="taxes" type='number'/>
+                    <input onkeyup="getTotal()"  placeholder='ads' id="ads" type='number'/>
+                    <input onkeyup="getTotal()"  placeholder='discount' id="discount" type='number'/>
+                    <span class='total' id="total">0</span>
+                </div>
+                <input   placeholder='count number between 0 and 100' id="count" type='number'/>
+                <input   placeholder='category' id="category" type='text'/>
+                <button  type='submit' onclick=" addProduct()" id="btn-submit" class="btn-submit"> create</button>
+                
+                <input  placeholder="search by title" onkeyup="searchF()"  id="search" type='text'/>
+                <div class='btn-search'>
+                    <button class='btn-title' onclick="searchBtn(this.id)" id="btn-title" >search by title</button>
+                    <button class='btn-category' onclick="searchBtn(this.id)" id="btn-category" >search by category</button>
+                </div>
+                <button  class='btn-All' onclick="deleteAllProduct()" id="btn-All"><span id="del-All">deleteAll</span> </button>
+            </div>
+            <!-- End Inputs projects-->
+
+            <!-- start Table projects-->
+            <div class="table">
+                <table>
+                    <tr>
+                    <th>id</th>
+                    <th>title</th>
+                    <th>price</th>
+                    <th>Taxes</th>
+                    <th>ads</th>
+                    <th>discount</th>
+                    <th>category</th>
+                    <th>total</th>
+                    <th>update</th>
+                    <th>del</th>
+                    </tr>
+                    <tbody id="tbody">
+                        
+                    </tbody>
+                </table>
+            </div>
+            <!-- End Table projects-->
+
+        </div>
+
+    </div>
+   
+       
+    
+    
+
+    <script src="main.js" ></script>
+</body>
+</html>
