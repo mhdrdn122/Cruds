@@ -80,6 +80,8 @@ function addProduct(){
                 }
                 localStorage.setItem("products",JSON.stringify(data))
                 cleanInputs()   
+                total.innerHTML=0
+                total.style.backgroundColor="red"
 
             }
         }
